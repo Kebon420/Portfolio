@@ -1,38 +1,40 @@
 <!DOCTYPE html>
+
 <html>
 
     <head>
-    
-
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+        
+        
+        <title>Portfolio di Kevin De luca: Home Page</title>
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
         <meta charset="utf-8">
         
-        <link rel="stylesheet" href="links/CSS/styles.css">
-
-        <script src="links/JS/script.js"></script>
-
-        <title>Portfolio</title>
-
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>        
     </head>
 
-    
-    <body class="corpo">
+    <body>
 
-        <button class="nome bebas-neue-regular" >Kevin De luca</button>
+        <div class="menu" id="menu">
 
-        <button class="minibottone bebas-neue-regular">Esperienze</button>
-        
-        <button class="minibottone bebas-neue-regular">Abilità</button>
+            <button class="pulsantone"          onclick="AboutMe()"     >KEVIN DE LUCA          </button>
+            <button class="pulsante esperienze" onclick="Esperienze()"  >ESPERIENZE LAVORATIVE  </button>
+            <button class="pulsante tecnologie" onclick="Tecnologie()"  >DIGITAL SKILLS         </button>
 
-        <button class="minibottone bebas-neue-regular">Contattami</button>
+            <div class="menuKevin" id="menuKevin">
+            </div>
+
+
+        </div>
+
 
 
     </body>
 
-
-
-
-    </html>
+</html>

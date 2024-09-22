@@ -1,0 +1,249 @@
+html, body{
+  margin: 0px;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  
+  
+  background-color: #DCD9D4;
+  background-image: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
+  animation: gradient 2s ease-in-out infinite forwards;
+  height: 100vh;
+  
+}
+
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+	}
+
+  25%{
+    background-position: 0% 100%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+	75% {
+    background-position: 100% 0%;
+	}
+
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+p{
+  margin-top: 5px;
+  text-shadow: 1px 1px #000504;
+}
+
+li{ 
+  margin-top: 5px;
+  text-shadow: 1px 1px #000504;
+}
+
+h3{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-shadow: 1px 1px #000504;
+}
+
+a{
+  color: #0b9683;
+  text-shadow: 1px 1px #02241f;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #0dbba4;
+}
+
+.menu{
+  display: grid;
+
+  grid-template-rows:    2fr 0.2fr 1fr 0.2fr 1fr;
+  grid-template-columns: 1fr 0fr;
+
+  grid-template-areas: 
+  'titolo nana'
+  'nan nana'
+  'esperienze nana'
+  'nano nana'
+  'tecnologie nana';
+
+
+  margin: 50px;
+
+  width: 80vw;
+
+  height: 80vh;
+
+  transition: all 1s ease-out;
+}
+
+
+.menuKevin{
+  color: white;
+  font-size: 0%;
+  transition: all 1s linear;
+  position: relative;
+  margin-left: 2%;
+}
+
+
+.menuKevin::before{
+  position: absolute;
+  content: '';
+  
+  
+  height:  100%;
+  width:   100%;
+  
+  top: 50%;
+  left: 50%;
+  
+  transform: translate(-50%, -50%);
+
+  background: linear-gradient(to right,black 0%, rgb(32, 32, 32) 100%);
+  z-index: -1;
+
+  filter: blur(10px);
+
+  transition: all 0s;
+}
+
+button{
+  cursor: pointer;
+}
+
+.pulsantone{
+
+  grid-area: titolo;
+
+  color:aliceblue;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 6rem;
+  text-wrap: nowrap;
+  position: relative;
+
+  background-color: transparent;
+  border-style: none;
+
+  border-radius: 10px;
+
+
+  transition: all 400ms ease-in-out;
+
+  width: 100%;
+  
+}
+
+.pulsantone:hover{
+  font-size: 7rem;
+}
+
+.pulsantone::after, .pulsantone::before{
+  position: absolute;
+  content: '';
+  
+  
+  height: 100%;
+  width: 100%;
+  
+  top: 50%;
+  left: 50%;
+  
+  transform: translate(-50%, -50%);
+}
+
+.pulsantone::after{
+  background: linear-gradient(180deg,black 0%, #F06543 100%);
+  background-size: 800% 800%;
+  background-position: 0% 0%;
+  border-radius: 10px;
+  z-index: -1;
+  transition: 400ms ease-in-out;
+}
+
+.pulsantone::before{
+  background: linear-gradient(to right,black 0%, rgb(32, 32, 32) 100%);
+  z-index: -1;
+
+  filter: blur(10px);
+}
+
+
+.pulsantone:hover::after{
+  background-position: 0% 100%;
+}
+
+.pulsante{
+  color: aliceblue;
+  font-size: 3rem;
+
+  background-color: transparent;
+  position: relative;
+
+  border: none;
+
+  transition: all 400ms ease-in-out;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.pulsante::before, .pulsante::after{
+  content: '';
+  position: absolute;
+  
+  width: 100%;
+  height: 100%;
+  
+  
+  top: 0%;
+  left: 0%;
+  transition: all 400ms;
+}
+
+.tecnologie::after{
+  background: linear-gradient(180deg, black 0%, #246EB9 100%);
+  background-size: 800% 800%;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.esperienze::after{
+  background: linear-gradient(180deg, black 0%, #4CB944 100%);
+  background-size: 800% 800%;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.pulsante::before{
+  z-index: -1;
+  background-color: black;
+  filter: blur(10px);
+}
+
+.pulsante:hover::after{
+  background-position: 100% 100%;
+}
+
+.pulsante:hover{
+  font-size: 4rem;
+}
+
+.tecnologie{
+  grid-area: tecnologie;
+}
+
+.esperienze{
+  grid-area: esperienze;
+}
