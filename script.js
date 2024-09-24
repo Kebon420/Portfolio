@@ -37,15 +37,32 @@ function parteMenuKevin(numeroBottone, html){
 
     if(numeroBottone != ultimoBottoneCliccato){
 
-        document.getElementById("menu").style.gridTemplateColumns = '1fr 1fr' 
+        if (window.innerWidth >= 1300) {
+            document.getElementById("menu").style.gridTemplateColumns = '1fr 1fr' 
+
+            document.getElementById("menuKevin").style = 
+                stileMenuKevin + `
+                background-position: ${posizioneSfondoX} ${posizioneSfondoY};
+                padding: 50px;
+                font-size:2vw;
+                `;
+            
+        } else {
+            document.getElementById("menu").style.gridTemplateRows = '6fr 0.2fr 1fr'
+
+            document.getElementById("menuKevin").style = 
+                stileMenuKevin + `
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-position: ${posizioneSfondoX} ${posizioneSfondoY};
+                padding: 50px;
+                font-size:1.6vh;
+                `;
+        }
         
-        document.getElementById("menuKevin").style = 
         
-            stileMenuKevin + `
-            background-position: ${posizioneSfondoX} ${posizioneSfondoY};
-            padding: 50px;
-            font-size:2rem;
-            `;
         
         document.getElementById("menuKevin").innerHTML = html
 
@@ -55,13 +72,19 @@ function parteMenuKevin(numeroBottone, html){
 
         ultimoBottoneCliccato = 10;
 
-        document.getElementById("menu").style.gridTemplateColumns = '1fr 0fr' 
+        if (window.innerWidth >= 1300) {
+            document.getElementById("menu").style.gridTemplateColumns = '1fr 0fr'
+        
+        } else {
+            document.getElementById("menu").style.gridTemplateRows = '0fr 0fr 1fr'
+            document.getElementById("menuKevin").innerHTML = ''
+        }
 
         document.getElementById("menuKevin").style = 
-
             stileMenuKevin + `
             background-position: ${posizioneSfondoX} ${posizioneSfondoY};
             `;
+        
     }
     
 }

@@ -17,7 +17,6 @@ body {
   
 }
 
-
 @keyframes gradient {
   0% {
     background-position: 0% 0%;
@@ -43,11 +42,13 @@ body {
 p{
   margin-top: 5px;
   text-shadow: 1px 1px #000504;
+  text-align: center;
 }
 
 li{ 
   margin-top: 5px;
   text-shadow: 1px 1px #000504;
+  text-align: left;
 }
 
 h3{
@@ -69,15 +70,13 @@ a:hover{
 .menu{
   display: grid;
 
-  grid-template-rows:    2fr 0.2fr 1fr 0.2fr 1fr;
-  grid-template-columns: 1fr 0fr;
+  grid-template-rows:    0fr 0fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 
   grid-template-areas: 
-  'titolo nana'
-  'nan nana'
-  'esperienze nana'
-  'nano nana'
-  'tecnologie nana';
+  'nana nana nana'
+  'nan nan nan'
+  'titolo esperienze tecnologie';
 
 
   margin: 50px;
@@ -130,7 +129,7 @@ button{
 
   color:aliceblue;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 6rem;
+  font-size: 3vw;
   text-wrap: nowrap;
   position: relative;
 
@@ -147,7 +146,7 @@ button{
 }
 
 .pulsantone:hover{
-  font-size: 7rem;
+  font-size: 4vw;
 }
 
 .pulsantone::after, .pulsantone::before{
@@ -174,9 +173,8 @@ button{
 }
 
 .pulsantone::before{
-  background: linear-gradient(to right,black 0%, rgb(32, 32, 32) 100%);
   z-index: -1;
-
+  background-color: black;
   filter: blur(10px);
 }
 
@@ -187,7 +185,9 @@ button{
 
 .pulsante{
   color: aliceblue;
-  font-size: 3rem;
+  font-size: 3vw;
+
+  text-wrap: wrap;
 
   background-color: transparent;
   position: relative;
@@ -237,7 +237,7 @@ button{
 }
 
 .pulsante:hover{
-  font-size: 4rem;
+  font-size: 4vw;
 }
 
 .tecnologie{
@@ -246,4 +246,54 @@ button{
 
 .esperienze{
   grid-area: esperienze;
+}
+
+
+
+/* VERSIONE DA PC */
+@media (min-width: 1300px){
+
+  p{
+    text-align: left;
+  }
+
+  .menu{
+    display: grid;
+  
+    grid-template-rows:    2fr 0.2fr 1fr 0.2fr 1fr;
+    grid-template-columns: 1fr 0fr;
+  
+    grid-template-areas: 
+    'titolo nana'
+    'nan nana'
+    'esperienze nana'
+    'nano nana'
+    'tecnologie nana';
+  
+  
+    margin: 50px;
+  
+    width: 80vw;
+  
+    height: 80vh;
+  
+    transition: all 1s ease-out;
+  }
+
+
+  .pulsante{
+    font-size: 3rem;
+  }
+
+  .pulsante:hover{
+    font-size: 4rem;
+  }
+
+  .pulsantone{
+    font-size: 6rem;    
+  }
+  
+  .pulsantone:hover{
+    font-size: 7rem;
+  }
 }
