@@ -139,7 +139,6 @@ function Tecnologie(){
     <li>CircuitJS Falstad</li>
     <li>Visual Studio Code</li>
     <li>GitHub Desktop</li>
-    <li>Docker</li>
     `
 
 
