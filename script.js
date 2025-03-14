@@ -2,13 +2,13 @@ const menuKevin = document.getElementById("menuKevin")
 
 const stileMenuKevin = `
         grid-area: nana;
-        background: conic-gradient(from 0deg at 50% 50%, #f06543, #246EB9, #4CB944, #f06543);
+        background: conic-gradient(from 0deg at 50% 50%, #58A4B0, #FE5E41, #F3DE8A, #58A4B0);
         background-size: 1000% 1000%;
         border-radius: 2%;
         color: white;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         text-wrap: wrap;
-        transition: all 1s linear;
+        transition: all 1s ease-in-out;
         `
 
 let ultimoBottoneCliccato = 10;
@@ -110,11 +110,6 @@ function AboutMe(){
 
 function Esperienze(){
     let codiceHtml = `
-    <h3>Progetti Personali:</h3>
-    <li>Questo Sito</li>
-    <li><a href="https://carcallingus.neocities.org" target="blank_">Portfolio di un artista</a></li>
-    <li>AutoVideoMaker</li>
-    <br>
     <h3>Con la Scuola:</h3>
     <li><a href="https://www.belluzzifioravanti.it/il-nostro-istituto-partecica-alliniziativa-adotta-una-scuola/" target="blank_">Impianto scuola elementare</li>
     `

@@ -11,7 +11,7 @@ body {
   
   
   background-color: #DCD9D4;
-  background-image: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
+  background-image: linear-gradient(to top, #1B1B1E 0%, #373F51 100%);
   animation: gradient 2s ease-in-out infinite forwards;
   height: 100vh;
   
@@ -70,7 +70,7 @@ a:hover{
 .menu{
   display: grid;
 
-  grid-template-rows:    0fr 0fr 1fr;
+  grid-template-rows:    0fr 0.1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
 
   grid-template-areas: 
@@ -138,7 +138,6 @@ button{
 
   border-radius: 10px;
 
-
   transition: all 400ms ease-in-out;
 
   width: 100%;
@@ -164,12 +163,26 @@ button{
 }
 
 .pulsantone::after{
-  background: linear-gradient(180deg,black 0%, #F06543 100%);
-  background-size: 800% 800%;
+  background: linear-gradient(180deg,#424B54 0%, #58A4B0 100%);
+  background-size: 1000% 1000%;
   background-position: 0% 0%;
   border-radius: 10px;
   z-index: -1;
   transition: 400ms ease-in-out;
+}
+
+.esperienze::after{
+  background: linear-gradient(180deg, #424B54 0%, #F3DE8A 100%);
+  background-size: 800% 800%;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.tecnologie::after{
+  background: linear-gradient(180deg, #424B54 0%, #FE5E41 100%);
+  background-size: 800% 800%;
+  z-index: -1;
+  border-radius: 10px;
 }
 
 .pulsantone::before{
@@ -212,19 +225,9 @@ button{
   transition: all 400ms;
 }
 
-.tecnologie::after{
-  background: linear-gradient(180deg, black 0%, #246EB9 100%);
-  background-size: 800% 800%;
-  z-index: -1;
-  border-radius: 10px;
-}
 
-.esperienze::after{
-  background: linear-gradient(180deg, black 0%, #4CB944 100%);
-  background-size: 800% 800%;
-  z-index: -1;
-  border-radius: 10px;
-}
+
+
 
 .pulsante::before{
   z-index: -1;
